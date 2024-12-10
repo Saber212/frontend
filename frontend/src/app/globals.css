@@ -2,20 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
   color: var(--foreground);
   background: var(--background);
+  height: 100vh;
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.form-container {
+  background-image: url('./images/rm125batch2-ning-13-frames.jpg');
+  background-size: cover;
+  padding: 20px;          /* Add spacing inside the form */
+  border-radius: 10px;    /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for elevation */
+  width: 500px;    
+  height: 500px;       /* Fixed width */
+  display: flex;          /* Flexbox to center contents inside */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center;    /* Center-align the inputs horizontally */
+  gap: 70px;              /* Add spacing between inputs */
+}
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 20px;
+  border: none; 
+  background-color: #555;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #444;
 }
